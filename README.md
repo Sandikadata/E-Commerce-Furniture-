@@ -1,9 +1,7 @@
-# E-Commerce-Furniture -Internship Project
- This dataset comprises 2,000 entries scraped from AliExpress, detailing a variety of
- furniture products. It captures key sales metrics and product details, offering a
- snapshot of consumer purchasing patterns and market trends in the online furniture
- retail space.
-  The dataset is ripe for exploratory data analysis, market trend analysis, and price
- optimization studies. It can also be used for predictive modeling to forecast sales,
-understand the impact of discounts on sales volume, and analyze the relationship
- between product features and their popularity
+E-Commerce Furniture Sales Analysis & PredictionWelcome to the E-Commerce Furniture Project repository! This project focuses on cleaning, exploring, and modeling online furniture sales data to uncover purchasing trends and predict product performance.🚀 Key Features & WorkflowData Preprocessing & Cleaning:Cleaned price and original price columns by stripping currency symbols ($) and comma separators, converting them into floating-point numbers.   Handled missing values and computed a derived discount percentage feature.   Feature Engineering & Text Analysis:Consolidated various shipping categories into core tags (Free shipping, +Shipping: $5.09, and others).   Applied TF-IDF Vectorization (max_features=1000) on productTitle text descriptions to extract meaningful text features for modeling.   Exploratory Data Analysis (EDA):Visualized price distributions, shipping label frequencies, and correlations between pricing and sales volume using matplotlib and seaborn.   Machine Learning Modeling:Trained and evaluated multiple models (Linear Regression, Random Forest, and Logistic Regression) to predict sales volume (sold).   📊 Model Performance ComparisonModelMAEMSERMSELinear Regression   583.07   641,465.06   800.92   Random Forest Classifier   50.67   51,202.29   226.28   Logistic Regression   51.90   18,451.62   135.84   📂 Repository StructurePlaintext├── Ecommerece project Internship.ipynb    # Google Colab Notebook with full code, plots, and execution steps
+├── ecommerce_furniture_dataset_2024.csv   # Raw e-commerce furniture dataset
+└── README.md                              # Project documentation
+🛠️ Getting Started & InstallationTo run or review this project locally, clone the repository and install the required dependencies:Bashgit clone https://github.com/Sandikadata/E-Commerce-Furniture-.git
+cd E-Commerce-Furniture
+pip install pandas numpy matplotlib seaborn scikit-learn
+💡 Future ImprovementsHyperparameter tuning for tree-based models to further reduce prediction error.Expanding text feature extraction using advanced word embeddings (e.g., Word2Vec or Transformers).Deploying the trained model as a web application for real-time sales estimation.
